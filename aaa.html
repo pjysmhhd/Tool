@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhatToEatToDay</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #display {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #randomButton {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="display">What to eat today?</div>
+  <button id="randomButton" onclick="START()">START</button>
+
+  <script>
+    function START() {
+      // list
+      var words = [
+        "Pizza", "Burgers", "Fried Chicken", "Tacos", "Steak", "BBQ Ribs", "Pasta", "Sushi", "Macaroni and Cheese", "Hot Dogs", "French Fries", "Pancakes", "Donuts", "Ice Cream", "Burritos", "Buffalo Wings", "Sandwiches", "Chili", "Popcorn", "Nachos", "Cheesecake", "Sushi", "Chocolate Chip Cookies", "Apple Pie", "Brownies", "Cupcakes", "Mashed Potatoes", "Chicken Noodle Soup", "Pulled Pork Sandwich", "Shrimp Scampi", "Caesar Salad", "Gumbo", "Ramen", "Pho", "Cinnamon Rolls", "Hamburgers", "Cheeseburgers", "Fried Rice", "Muffins", "Barbecue Sandwich", "Fish and Chips", "Garlic Bread", "Pecan Pie", "Eggs Benedict", "Fajitas", "Potato Salad", "Egg Rolls", "Chow Mein", "S'mores", "Churros", "Onion Rings", "Quesadillas", "Coleslaw", "Fondue", "Tater Tots", "Chicken and Waffles", "Pulled Pork", "Gyros", "Biscuits and Gravy", "Lasagna", "Pad Thai", "Sourdough Bread", "Potato Skins", "Deviled Eggs", "Key Lime Pie", "Beef Stroganoff", "Clam Chowder", "Eggplant Parmesan", "Guacamole", "Risotto", "Cobb Salad", "Philly Cheesesteak", "Chicken Fried Steak", "Beef Wellington", "Pierogi", "Escargot", "Huevos Rancheros", "Mongolian Beef", "Crab Cakes", "Tuna Casserole", "French Toast", "Shrimp and Grits", "Lobster Roll", "Pad See Ew", "Baked Ziti", "Chicken Parmesan", "Ratatouille", "Rice Pilaf", "Sausage Gravy and Biscuits", "Pork Chops", "Beef Tacos",
+        // Wait More
+      ];
+
+      var randomIndex = Math.floor(Math.random() * words.length); // Index of randomly selected words
+      var randomWord = words[randomIndex]; // Retrieve random words based on index
+
+      document.getElementById("display").innerText = "How about " + randomWord; // Show word
+    }
+  </script>
+</body>
+</html>
